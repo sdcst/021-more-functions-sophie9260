@@ -16,8 +16,15 @@ assert hypotenuse(6,8) == 10
 """
 
 
-def hypotenuse():
-    pass
+def hypotenuse(a,b):
+    if a > 0 and b > 0:
+        a = float(a)
+        b = float(b)
+        c = ((a**2)+(b**2))**0.5
+        c = round(c,2)
+        return c
+    else:
+        return None
 
 assert hypotenuse(6,8) == 10
 assert hypotenuse(5,12) == 13

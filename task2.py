@@ -10,7 +10,20 @@ r = rate of interest as a percentage
 """
 
 def compoundInterest(P,r,t,n):
-    return
+    P = float(P)
+    r = float(r)
+    r =  r/100
+    t = float(t)
+    n = float(n)
+    upper = n*t
+    upper = float(upper)
+    middle = r/n
+    Middle = 1+middle
+    PP = Middle**upper
+    a = P*PP
+    a = float(a)
+    a = round(a,2)
+    return a
 
 assert compoundInterest(1000,4,2,4) == 1082.86
 assert compoundInterest(2500,4.2,20,12) == 5782.43
